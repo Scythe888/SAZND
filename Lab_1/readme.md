@@ -35,51 +35,114 @@ uname -r
 cat /proc/cpuinfo | grep "model name"
 ```
 	
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-	model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+	model name      : Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz
+	model name      : Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz
+	model name      : Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz
+	model name      : Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz
+	model name      : Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz
+	model name      : Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz
 
-3\. Также выполним команду journalctl -q -b \| tail -n 30 для вывода последних 30 строк логов
+3\. Также выполним команду systeminfo для вывода основных сведений о
+системе
 
-```{bash}
-journalctl | tail -n 30
+``` bash
+systeminfo
 ```
 
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Listening on GnuPG cryptographic agent and passphrase cache.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Listening on debconf communication socket.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Listening on REST API socket for snapd user session agent.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Listening on D-Bus User Message Bus Socket.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Reached target Sockets.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Reached target Basic System.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Reached target Main User Target.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1544]: Startup finished in 89ms.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1]: Started User Manager for UID 1000.
-	Mar 01 09:59:58 Georgy-VivoBook systemd[1]: Started Session c1 of user st-georgy.
-	Mar 01 10:00:17 Georgy-VivoBook sudo[1574]: st-georgy : TTY=pts/0 ; PWD=/home/st-georgy ; USER=root ; COMMAND=/usr/bin/bash
-	Mar 01 10:00:17 Georgy-VivoBook sudo[1574]: pam_unix(sudo:session): session opened for user root by (uid=0)
-	Mar 01 10:00:20 Georgy-VivoBook systemd[1]: systemd-timedated.service: Succeeded.
-	Mar 01 10:00:28 Georgy-VivoBook systemd[1]: Reloading.
-	Mar 01 10:04:50 Georgy-VivoBook dbus-daemon[239]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.12' (uid=0 pid=747 comm="/usr/lib/snapd/snapd ")
-	Mar 01 10:04:50 Georgy-VivoBook systemd[1]: Starting Time &amp; Date Service...
-	Mar 01 10:04:50 Georgy-VivoBook dbus-daemon[239]: [system] Successfully activated service 'org.freedesktop.timedate1'
-	Mar 01 10:04:50 Georgy-VivoBook systemd[1]: Started Time &amp; Date Service.
-	Mar 01 10:05:20 Georgy-VivoBook systemd[1]: systemd-timedated.service: Succeeded.
-	Mar 01 10:09:24 Georgy-VivoBook systemd[1]: Starting Ubuntu Advantage Timer for running repeated jobs...
-	Mar 01 10:09:25 Georgy-VivoBook systemd[1]: ua-timer.service: Succeeded.
-	Mar 01 10:09:25 Georgy-VivoBook systemd[1]: Finished Ubuntu Advantage Timer for running repeated jobs.
-	Mar 01 10:09:43 Georgy-VivoBook snapd[747]: devicemgr.go:1761: no NTP sync after 10m0s, trying auto-refresh anyway
-	Mar 01 10:14:41 Georgy-VivoBook systemd[1]: Starting Cleanup of Temporary Directories...
-	Mar 01 10:14:42 Georgy-VivoBook systemd[1]: systemd-tmpfiles-clean.service: Succeeded.
-	Mar 01 10:14:42 Georgy-VivoBook systemd[1]: Finished Cleanup of Temporary Directories.
-	Mar 01 10:17:01 Georgy-VivoBook CRON[1679]: pam_unix(cron:session): session opened for user root by (uid=0)
-	Mar 01 10:17:01 Georgy-VivoBook CRON[1680]: (root) CMD (   cd / &amp;&amp; run-parts --report /etc/cron.hourly)
-	Mar 01 10:17:01 Georgy-VivoBook CRON[1679]: pam_unix(cron:session): session closed for user root
+
+	Имя узла:                         DESKTOP-83KR26F
+	Название ОС:                      Майкрософт Windows 10 Pro
+	Версия ОС:                        10.0.19044 Н/Д построение 19044
+	Изготовитель ОС:                  Microsoft Corporation
+	Параметры ОС:                     Изолированная рабочая станция
+	Сборка ОС:                        Multiprocessor Free
+	Зарегистрированный владелец:      vivnniczkij@mail.ru
+	Зарегистрированная организация:   Н/Д
+	Код продукта:                     00330-80000-00000-AA187
+	Дата установки:                   24.05.2021, 23:51:04
+	Время загрузки системы:           15.05.2023, 16:41:56
+	Изготовитель системы:             System manufacturer
+	Модель системы:                   System Product Name
+	Тип системы:                      x64-based PC
+	Процессор(ы):                     Число процессоров - 1.
+                                  [01]: Intel64 Family 6 Model 158 Stepping 12 GenuineIntel ~3696 МГц
+	Версия BIOS:                      American Megatrends Inc. 1502, 26.06.2019
+	Папка Windows:                    C:\WINDOWS
+	Системная папка:                  C:\WINDOWS\system32
+	Устройство загрузки:              \Device\HarddiskVolume2
+	Язык системы:                     ru;Русский
+	Язык ввода:                       ru;Русский
+	Часовой пояс:                     (UTC+03:00) Москва, Санкт-Петербург
+	Полный объем физической памяти:   16 302 МБ
+	Доступная физическая память:      8 534 МБ
+	Виртуальная память: Макс. размер: 23 470 МБ
+	Виртуальная память: Доступна:     9 285 МБ
+	Виртуальная память: Используется: 14 185 МБ
+	Расположение файла подкачки:      D:\pagefile.sys
+	Домен:                            WORKGROUP
+	Сервер входа в сеть:              \\DESKTOP-83KR26F
+	Исправление(я):                   Число установленных исправлений - 23.
+                                  	[01]: KB5022502
+                                  	[02]: KB4562830
+                                  	[03]: KB4577586
+                                  	[04]: KB4580325
+                                  	[05]: KB5003791
+                                  	[06]: KB5012170
+                                  	[07]: KB5015684
+                                  	[08]: KB5026361
+                                  	[09]: KB5006753
+                                  	[10]: KB5007273
+                                  	[11]: KB5011352
+                                  	[12]: KB5011651
+                                  	[13]: KB5014032
+                                  	[14]: KB5014035
+                                  	[15]: KB5014671
+                                  	[16]: KB5015895
+                                  	[17]: KB5016705
+                                  	[18]: KB5018506
+                                  	[19]: KB5020372
+                                  	[20]: KB5022924
+                                  	[21]: KB5023794
+                                  	[22]: KB5025315
+                                  	[23]: KB5005699
+	Сетевые адаптеры:               Число сетевых адаптеров - 7.
+                                  	[01]: TAP-Windows Adapter V9
+                                        Имя подключения: Подключение по локальной сети
+                                        Состояние:       Носитель отключен
+                                  	[02]: Intel(R) Ethernet Connection (7) I219-V
+                                        Имя подключения: Ethernet
+                                        DHCP включен:    Да
+                                        DHCP-сервер:     192.168.100.1
+                                        IP-адрес
+                                        [01]: 192.168.100.231
+                                        [02]: fe80::2daf:f2aa:4a47:eb07
+                                  	[03]: TAP-ProtonVPN Windows Adapter V9
+                                        Имя подключения: Подключение по локальной сети 2
+                                        Состояние:       Носитель отключен
+                                  	[04]: Wintun Userspace Tunnel
+                                        Имя подключения: ProtonVPN TUN
+                                        Состояние:       Носитель отключен
+                                  	[05]: Famatech RadminVPN Ethernet Adapter
+                                        Имя подключения: Radmin VPN
+                                        DHCP включен:    Нет
+                                        IP-адрес
+                                        [01]: 26.110.4.28
+                                        [02]: fe80::49f6:c579:88a8:dbfd
+                                        [03]: fdfd::1a6e:41c
+                                  	[06]: LogMeIn Hamachi Virtual Ethernet Adapter
+                                        Имя подключения: Hamachi
+                                        Состояние:       Оборудование не найдено
+                                  	[07]: VirtualBox Host-Only Ethernet Adapter
+                                        Имя подключения: Ethernet 2
+                                        DHCP включен:    Нет
+                                        IP-адрес
+                                        [01]: 192.168.56.1
+                                        [02]: fe80::c96b:61ca:ae88:e39d
+	Требования Hyper-V:             Расширения режима мониторинга виртуальной машины: Да
+                                  	Виртуализация включена во встроенном ПО: Да
+                                  	Преобразование адресов второго уровня: Да
+                                  	Доступно предотвращение выполнения данных: Да
+
 
 ## Оценка результата
 
