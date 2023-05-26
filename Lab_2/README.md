@@ -61,12 +61,7 @@ awk '/^[^#]/ {print $10}' dns.log >> dns
 ``` bash
 curl https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts -o /home/vlad/hosts
 ```
-```
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 5925k  100 5925k    0     0  4510k      0  0:00:01  0:00:01 --:--:-- 4512k
-
-```
+![изображение](https://github.com/Scythe888/SAZND/assets/134215335/58b894cf-a504-4a90-a7b5-f28bcdfc7863)
 
 ### Шаг 4
 
