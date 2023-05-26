@@ -112,7 +112,7 @@ print("Количество нежелательных хостов: {}.".format
 
 Получены результаты:
 
-![image](https://github.com/Nosochekir/SAZND/assets/90778008/a07f638d-bfe0-46eb-a7e2-9e80ab85197f)
+![изображение](https://github.com/Scythe888/SAZND/assets/134215335/1f3b53e3-bfd8-46dd-8305-25d92a7e4a6c)
 
 ## ️Вывод 
 
